@@ -13,33 +13,36 @@
 
 #include "Tuner.h"
 #include "remoteKey.h"
-#include <string>
+#include <algorithm>
 #include <iostream>
+#include <string>
+#include <vector>
 
 class TVController {
-private:
-    Tuner* tuner;
-    std::string processingCH;
-
-    void setTunerCh() {
-        // 로그는 테스트의 결과가 절대 아닙니다. 로그가 있는 것을 테스트로 간주하지 마시기 바랍니다.
-        std::cout << "현재 설정하는 채널 : " << processingCH << std::endl;
-        // tuner->setCH(processingCH);
-    }
+protected:
+  Tuner &tuner;
+  int ChannelBuffer = -1;
+  std::vector<int> FavoriteChannels;
 
 public:
-    explicit TVController(Tuner* tuner) : tuner(tuner), processingCH("") {}
+  explicit TVController(Tuner &t) : tuner(t) {}
+  void PressNumber(int ch);
+  void PressConfirm();
+  void PressFavorite();
+  void PressNextFavorite();
+  void PressOthers();
+  void AddFavoriteChannel(int ch);
+  const std::vector<int> &GetFavoriteChannels() const {
+    return FavoriteChannels;
+  };
 
-    void pushButton(remoteKey key) {
-        switch (key) {
-            case remoteKey::KEY_1:
-                processingCH += to_string(key);
-                break;
-            case remoteKey::KEY_OK:
-                setTunerCh();
-                break;
-        }
-    }
+private:
+  bool IsValidChannel(int ch) const { return ch >= 0 && ch <= 99; }
+  bool IsFavorite(int ch) const {
+    return std::find(FavoriteChannels.begin(), FavoriteChannels.end(), ch) !=
+           FavoriteChannels.end();
+  }
+  void ApplyChannel(int ch);
 };
 
 #endif // TV_CONTROLLER_H

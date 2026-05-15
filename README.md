@@ -59,3 +59,133 @@
         * 채널 6을 시청중, 채널 업을 누르면 14로 변경, 다운을 누르면 4로 변경된다.  
         * 채널 15를 시청중, 채널 업을 누르면 4로 변경, 다운을 누르면 14로 변경된다.  
   
+
+# To Do List
+--------- DEV BRANCH ---------
+[O] Tuner 메소드 정의
+[O] TV Controller 메소드 정의
+[O] Tuner 테스트 진행
+[O] TV Controller 테스트 진행
+[O] TV Controller Mock 테스트 진행
+[O] Approval Test 진행
+[O] Coverage 확인 (lcov)
+
+--------- Refactoring BRANCH ---------
+[O] 코드 리팩토링 진행
+
+# Tuner 테스트 결과
+#3588│ [==========] Running 13 tests from 3 test suites.
+#3588│ [----------] Global test environment set-up.
+#3588│ [----------] 3 tests from TunerTest
+#3588│ [ RUN      ] TunerTest.initChannel @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:20
+#3588│ [       OK ] TunerTest.initChannel (0 ms)
+#3588│ 
+#3588│ [ RUN      ] TunerTest.testSeekCh10times @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:60
+#3588│ [       OK ] TunerTest.testSeekCh10times (0 ms)
+#3588│ 
+#3588│ [ RUN      ] TunerTest.testSeekCh10timesAfterSetCH @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:76
+#3588│ [       OK ] TunerTest.testSeekCh10timesAfterSetCH (0 ms)
+#3588│ 
+#3588│ [----------] 3 tests from TunerTest (0 ms total)
+#3588│ 
+#3588│ [----------] 5 tests from ValidChannels/TunerValidChannelTest
+#3588│ [ RUN      ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/0 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:32
+#3588│ [       OK ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/0 (0 ms)
+#3588│ 
+#3588│ [ RUN      ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/1 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:32
+#3588│ [       OK ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/1 (0 ms)
+#3588│ 
+#3588│ [ RUN      ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/2 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:32
+#3588│ [       OK ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/2 (0 ms)
+#3588│ 
+#3588│ [ RUN      ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/3 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:32
+#3588│ [       OK ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/3 (0 ms)
+#3588│ 
+#3588│ [ RUN      ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/4 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:32
+#3588│ [       OK ] ValidChannels/TunerValidChannelTest.testSetChForValidChannel/4 (0 ms)
+#3588│ 
+#3588│ [----------] 5 tests from ValidChannels/TunerValidChannelTest (0 ms total)
+#3588│ 
+#3588│ [----------] 5 tests from InvalidChannels/TunerInvalidChannelTest
+#3588│ [ RUN      ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/0 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:49
+#3588│ [       OK ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/0 (0 ms)
+#3588│ 
+#3588│ [ RUN      ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/1 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:49
+#3588│ [       OK ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/1 (0 ms)
+#3588│ 
+#3588│ [ RUN      ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/2 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:49
+#3588│ [       OK ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/2 (0 ms)
+#3588│ 
+#3588│ [ RUN      ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/3 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:49
+#3588│ [       OK ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/3 (0 ms)
+#3588│ 
+#3588│ [ RUN      ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/4 @ /C:/DEV/TDD_TV_05/test/TunerTest.cpp:49
+#3588│ [       OK ] InvalidChannels/TunerInvalidChannelTest.testSetChForInvalidChannel/4 (0 ms)
+#3588│ 
+#3588│ [----------] 5 tests from InvalidChannels/TunerInvalidChannelTest (0 ms total)
+#3588│ 
+#3588│ [==========] 13 tests from 3 test suites ran. (0 ms total)
+#3588│ [  PASSED  ] 13 tests.
+#3588│ Stopped PID#3588 - Exit(0) / OK - 'c:\DEV\TDD_TV_05\build\TunerTest.exe'
+
+
+# Approval Test 결과
+#6140│ Note: Google Test filter = ApprovalTest.PrintTextFixture
+#6140│ [==========] Running 1 test from 1 test suite.
+#6140│ [----------] Global test environment set-up.
+#6140│ [----------] 1 test from ApprovalTest
+#6140│ [ RUN      ] ApprovalTest.PrintTextFixture @ /C:/DEV/TDD_TV_05/test/ApprovalTest.cpp:49
+#6140│ [       OK ] ApprovalTest.PrintTextFixture (1 ms)
+#6140│ 
+#6140│ [----------] 1 test from ApprovalTest (2 ms total)
+#6140│ 
+#6140│ [==========] 1 test from 1 test suite ran. (2 ms total)
+#6140│ [  PASSED  ] 1 test.
+#6140│ Stopped PID#6140 - Exit(0) / OK - 'c:\DEV\TDD_TV_05\build\all_tests.exe'
+
+# TV Controller Test 결과
+#10472│ [==========] Running 5 tests from 1 test suite.
+#10472│ [----------] Global test environment set-up.
+#10472│ [----------] 5 tests from ControllerTest
+#10472│ [ RUN      ] ControllerTest.PressNumber1Confirm @ /C:/DEV/TDD_TV_05/test/TVControllerTest.cpp:16
+#10472│ [       OK ] ControllerTest.PressNumber1Confirm (0 ms)
+#10472│ 
+#10472│ [ RUN      ] ControllerTest.PressNumber2Confirm @ /C:/DEV/TDD_TV_05/test/TVControllerTest.cpp:23
+#10472│ [       OK ] ControllerTest.PressNumber2Confirm (0 ms)
+#10472│ 
+#10472│ [ RUN      ] ControllerTest.FavoriteChannelAdd @ /C:/DEV/TDD_TV_05/test/TVControllerTest.cpp:30
+#10472│ [       OK ] ControllerTest.FavoriteChannelAdd (0 ms)
+#10472│ 
+#10472│ [ RUN      ] ControllerTest.FavoriteChannelRemove @ /C:/DEV/TDD_TV_05/test/TVControllerTest.cpp:38
+#10472│ [       OK ] ControllerTest.FavoriteChannelRemove (0 ms)
+#10472│ 
+#10472│ [ RUN      ] ControllerTest.FavoriteToggleScenario @ /C:/DEV/TDD_TV_05/test/TVControllerTest.cpp:47
+#10472│ [       OK ] ControllerTest.FavoriteToggleScenario (0 ms)
+#10472│ 
+#10472│ [----------] 5 tests from ControllerTest (0 ms total)
+#10472│ 
+#10472│ [==========] 5 tests from 1 test suite ran. (0 ms total)
+#10472│ [  PASSED  ] 5 tests.
+#10472│ Stopped PID#10472 - Exit(0) / OK - 'c:\DEV\TDD_TV_05\build\TVControllerTest.exe'
+
+# TVControllerMock Test 결과
+#17572│ [==========] Running 4 tests from 1 test suite.
+#17572│ [----------] Global test environment set-up.
+#17572│ [----------] 4 tests from TVControllerMockTest
+#17572│ [ RUN      ] TVControllerMockTest.PressNumber1Confirm @ /C:/DEV/TDD_TV_05/test/TVControllerMockTest.cpp:23
+#17572│ [       OK ] TVControllerMockTest.PressNumber1Confirm (0 ms)
+#17572│ 
+#17572│ [ RUN      ] TVControllerMockTest.PressNumber2Confirm @ /C:/DEV/TDD_TV_05/test/TVControllerMockTest.cpp:30
+#17572│ [       OK ] TVControllerMockTest.PressNumber2Confirm (0 ms)
+#17572│ 
+#17572│ [ RUN      ] TVControllerMockTest.PressFavorite_GetsCurrentCH @ /C:/DEV/TDD_TV_05/test/TVControllerMockTest.cpp:37
+#17572│ [       OK ] TVControllerMockTest.PressFavorite_GetsCurrentCH (0 ms)
+#17572│ 
+#17572│ [ RUN      ] TVControllerMockTest.NextFav_CallsSetCH @ /C:/DEV/TDD_TV_05/test/TVControllerMockTest.cpp:43
+#17572│ [       OK ] TVControllerMockTest.NextFav_CallsSetCH (0 ms)
+#17572│ 
+#17572│ [----------] 4 tests from TVControllerMockTest (0 ms total)
+#17572│ 
+#17572│ [==========] 4 tests from 1 test suite ran. (0 ms total)
+#17572│ [  PASSED  ] 4 tests.
+#17572│ Stopped PID#17572 - Exit(0) / OK - 'c:\DEV\TDD_TV_05\build\TVControllerMockTest.exe'
