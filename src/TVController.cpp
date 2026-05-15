@@ -15,6 +15,7 @@ void TVController::PressNumber(int ch) {
     int SelectedChannel = ChannelBuffer * 10 + ch;
     ChannelBuffer = -1;
     ApplyChannel(SelectedChannel);
+    햣
   }
 }
 

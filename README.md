@@ -71,7 +71,7 @@
 [O] Coverage 확인 (lcov)
 
 --------- Refactoring BRANCH ---------
-[ ] 코드 리팩토링 진행
+[O] 코드 리팩토링 진행
 
 # Tuner 테스트 결과
 #3588│ [==========] Running 13 tests from 3 test suites.
