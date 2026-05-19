@@ -15,7 +15,6 @@ void TVController::PressNumber(int ch) {
     int SelectedChannel = ChannelBuffer * 10 + ch;
     ChannelBuffer = -1;
     ApplyChannel(SelectedChannel);
-    햣
   }
 }
 
@@ -48,7 +47,7 @@ void TVController::PressNextFavorite() {
   auto it = std::upper_bound(FavoriteChannels.begin(), FavoriteChannels.end(),
                              CurrentChannel);
   int NextChannel =
-      it != FavoriteChannels.end() ? *it : *FavoriteChannels.end();
+      it != FavoriteChannels.end() ? *it : *FavoriteChannels.begin();
   ApplyChannel(NextChannel);
 }
 
