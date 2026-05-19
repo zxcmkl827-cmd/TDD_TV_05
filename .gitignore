@@ -1,0 +1,9 @@
+# CMake / build outputs
+build/
+
+# IDE / OS
+.vs/
+.vscode/
+*.user
+Thumbs.db
+.DS_Store
