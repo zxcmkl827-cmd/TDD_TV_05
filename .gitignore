@@ -1,6 +1,13 @@
 # CMake / build outputs
 build/
 
+# Golden master failure artifacts (ApprovalTests)
+test/**/*.received.txt
+test/**/*.received.*
+
+# gtest_discover_tests generated metadata
+test/cmake_test_discovery_*.json
+
 # IDE / OS
 .vs/
 .vscode/
